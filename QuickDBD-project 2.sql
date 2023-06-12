@@ -8,7 +8,7 @@ SET XACT_ABORT ON
 BEGIN TRANSACTION QUICKDBD
 
 CREATE TABLE [Category] (
-    [category_id] INT  NOT NULL ,
+    [category_id] VARCHAR  NOT NULL ,
     [category] VARCHAR  NOT NULL ,
     CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED (
         [category_id] ASC
@@ -46,8 +46,8 @@ CREATE TABLE [campaign] (
     [currency] VARCHAR  NOT NULL ,
     [launch_date] DATE  NOT NULL ,
     [end_date] DATE  NOT NULL ,
-    [category_id] INT  NOT NULL ,
-    [subcategory_id] INT  NOT NULL ,
+    [category_id] VARCHAR  NOT NULL ,
+    [subcategory_id] VARCHAR  NOT NULL ,
     CONSTRAINT [PK_campaign] PRIMARY KEY CLUSTERED (
         [cf_id] ASC
     )
